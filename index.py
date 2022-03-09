@@ -21,8 +21,11 @@ def index():
     cursor.execute('select * from urls')
 
     urls = cursor.fetchall()
+
+    cursor.execute('SELECT MAX(nueva) AS nueva FROM urls')
+    ultima = cursor.fetchall()
     cursor.close()
-    return render_template("index.html",urls=urls)
+    return render_template("index.html", urls=urls, ultima = ultima)
 
 @app.get("/shorturl")
 def shortUrl():
@@ -32,10 +35,15 @@ def shortUrl():
 def shortUrlPost():
     nombreurl = request.form.get('url')
 
+    shrt = pyshorteners.Shortener()
+
+    nurl = shrt.tinyurl.short(nombreurl)
+
     cursor = db.cursor()
 
     cursor.execute("insert into urls(url, nueva) values(%s, %s)",(
         nombreurl,
+        nurl
     ))
     cursor.close()
     return redirect(url_for('index'))

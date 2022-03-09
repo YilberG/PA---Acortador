@@ -25,9 +25,11 @@
         {% endfor %}
     </table>
     <h1>la nueva url es</h1>
-    <h1><p>
-        {{nurl}}
-    </p></h1>
+    <h1>
+    {% for ultima in ultima %}
+    <a href="{{ ultima['nueva'] }}">{{ ultima['nueva'] }}</a>
+    {% endfor %}
+    </h1>
     </center>
 </body>
 </html>
