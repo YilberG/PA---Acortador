@@ -8,7 +8,9 @@
 </head>
 <body>
     <center>
-        <h1>este es el index de la pagina</h1>
+        <h1>ACORTADOR <br>
+            YILBER GUEVARA & WILLIAN LEGUIZAMON
+        </h1>
         <a href="{{ url_for('shortUrl') }}">
             <input type="button" value="Nuevo">
         </a>
@@ -16,7 +18,7 @@
             <input type="button" value="buscador">
         </a>
         <br><br>
-    <h1>la nueva url es</h1>
+    <h1>LA NUEVA URL ES</h1>
     <h1>
     {% for ultima in ultima %}
     <a href="{{ ultima['nueva'] }}">{{ ultima['nueva'] }}</a>
