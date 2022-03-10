@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +9,13 @@
 <body>
     <center>
         <h1>este es el index de la pagina</h1>
-        <a href="{{ url_for('shortUrl') }}">nuevo</a>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>NOMBRE</th>
-            <th>NUEVA URL</th>
-        </tr>
-        {% for urls in urls %}
-        <tr>
-            <th>{{ urls['id'] }}</th>
-            <th>{{ urls['url'] }}</th>
-            <th>{{ urls['nueva'] }}</th>
-        </tr>
-        {% endfor %}
-    </table>
+        <a href="{{ url_for('shortUrl') }}">
+            <input type="button" value="Nuevo">
+        </a>
+        <a href="{{ url_for('tablaurl') }}">
+            <input type="button" value="buscador">
+        </a>
+        <br><br>
     <h1>la nueva url es</h1>
     <h1>
     {% for ultima in ultima %}
