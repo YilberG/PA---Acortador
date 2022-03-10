@@ -24,9 +24,16 @@ CREATE TABLE IF NOT EXISTS `urls` (
   `url` varchar(255) NOT NULL,
   `nueva` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla url.urls: ~4 rows (aproximadamente)
+/*!40000 ALTER TABLE `urls` DISABLE KEYS */;
+INSERT IGNORE INTO `urls` (`id`, `url`, `nueva`) VALUES
+	(3, 'https://www.zonarutoppuden.com/2017/04/boruto-anime-capitulos.html', 'https://tinyurl.com/y9bpwxw9'),
+	(4, 'https://pixabay.com/es/photos/nubes-cielo-ambiente-cielo-azul-7050884/', 'https://tinyurl.com/yd4yyshm'),
+	(5, 'https://pixabay.com/es/photos/campo-ma%c3%b1ana-amanecer-6574455/', 'https://tinyurl.com/ybomruhj'),
+	(6, 'https://smodin.io/es/reproduzca-automaticamente-texto-en-espanol-gratis', 'https://tinyurl.com/yamlzyrj');
+/*!40000 ALTER TABLE `urls` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
