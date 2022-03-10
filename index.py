@@ -48,5 +48,21 @@ def shortUrlPost():
     cursor.close()
     return redirect(url_for('index'))
 
+@app.get("/tablaurl")
+def tablaurl():
+
+    cursor = db.cursor(dictionary=True)
+
+
+    cursor.execute('select * from urls')
+
+    urls = cursor.fetchall()
+
+    cursor.execute('SELECT MAX(nueva) AS nueva FROM urls')
+    ultima = cursor.fetchall()
+    cursor.close()
+    return render_template("tablaurl.html", urls=urls, ultima = ultima)
+
+
 app.run(debug=True)
 
