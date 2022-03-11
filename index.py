@@ -3,10 +3,10 @@ import mysql.connector
 import pyshorteners
 
 db = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='',
-    database='url',
+    host='academia.c1mebdhdxytu.us-east-1.rds.amazonaws.com',
+    user='p3',
+    password='ALrUBIaLYcHR',
+    database='p3',
     port=3306
 )
 db.autocommit = True

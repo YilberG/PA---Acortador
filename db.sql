@@ -14,8 +14,6 @@
 
 
 -- Volcando estructura de base de datos para url
-CREATE DATABASE IF NOT EXISTS `url` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `url`;
 
 -- Volcando estructura para tabla url.urls
 DROP TABLE IF EXISTS `urls`;
