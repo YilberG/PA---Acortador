@@ -1,0 +1,4 @@
+usuario:p3
+contraseña:ALrUBIaLYcHR
+base de datos: p3
+Host: academia.c1mebdhdxytu.us-east-1.rds.amazonaws.com
