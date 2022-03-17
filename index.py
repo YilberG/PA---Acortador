@@ -36,7 +36,7 @@ def shortUrl():
 
 @app.post("/shorturl")
 def shortUrlPost():
-    nombreurl = request.form.get('url')
+    nombreurl = request.form.get('url') #https://www.youtube.com/watch?v=Ox0vibQ6QZM
     codigo = ''.join(choice(string.ascii_letters+string.digits) for _ in range(4))
     nueva = request.host_url+codigo # http://127.0.0.1:5000/dsWN
 
